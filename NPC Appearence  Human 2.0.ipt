@@ -1,0 +1,319 @@
+; NPC Appearence Human 2.0.ipt
+; created 3/18/2017 10:24:35 PM
+; modified by Lord Skudley 7/9/2021 11:43pm
+Table: Appearance
+[@Race_And_Gender]<br><br>
+EndTable:
+
+
+
+
+//Table: Age
+//5:{1d4+11}
+//20:{1d24+15}
+//5:{1d20+39}
+//2:{1d20+59}
+//{1d20+79}
+
+Table: Age
+Type: Lookup
+1: <u>Age:</u> Child ({1d6+6})<br><u>Height and Weight:</u> [#{2d8} Height_And_Weight]
+2-3: <u>Age:</u> Teen ({12+1d7})<br><u>Height and Weight:</u> [#{d25+12} Height_And_Weight]
+4-7: <u>Age:</u> Adult ({19+1d31})<br><u>Height and Weight:</u> [#{d36+12} Height_And_Weight]
+8-9: <u>Age:</u> Middle aged ({50+1d15})<br><u>Height and Weight:</u> [#{d36+12} Height_And_Weight]
+10: <u>Age:</u> Old ({65+1d30})<br><u>Height and Weight:</u> [#{d24+12} Height_And_Weight]
+
+Table: Height_And_Weight
+Type: Lookup
+2: 3 ft. 1 in., {d71+4} lbs.
+3: 3 ft. 2 in., {d72+4} lbs.
+4: 3 ft. 3 in., {d73+4} lbs.
+5: 3 ft. 4 in., {d74+4} lbs.
+6: 3 ft. 5 in., {d75+4} lbs.
+7: 3 ft. 6 in., {d76+4} lbs.
+8: 3 ft. 7 in., {d77+4} lbs.
+9: 3 ft. 8 in., {d78+4} lbs.
+10: 3 ft. 9 in., {d79+4} lbs.
+11: 3 ft. 10 in., {d80+4} lbs.
+12: 3 ft. 11 in., {d81+4} lbs.
+13: 4 ft., {d82+4} lbs.
+14: 4 ft. 1 in., {d83+4} lbs.
+15: 4 ft. 2 in., {d84+4} lbs.
+16: 4 ft. 3 in., {d85+4} lbs.
+17: 4 ft. 4 in., {d86+4} lbs.
+18: 4 ft. 5 in., {2d4+85} lbs.
+19: 4 ft. 6 in., {3d4+85} lbs.
+20: 4 ft. 7 in., {4d4+85} lbs.
+21: 4 ft. 8 in., {6d4+85} lbs.
+22: 4 ft. 9 in., {8d4+85} lbs.
+23: 4 ft. 10 in., {10d4+85} lbs.
+24: 4 ft. 11 in., {12d4+85} lbs.
+25: 5 ft., {14d4+85} lbs.
+26: 5 ft. 1 in., {16d4+85} lbs.
+27: 5 ft. 2 in., {18d4+85} lbs.
+28: 5 ft. 3 in., {20d4+85} lbs.
+29: 5 ft. 4 in., {22d4+85} lbs.
+30: 5 ft. 5 in., {24d4+85} lbs.
+31: 5 ft. 6 in., {26d4+85} lbs.
+32: 5 ft. 7 in., {28d4+85} lbs.
+33: 5 ft. 8 in., {30d4+85} lbs.
+34: 5 ft. 9 in., {32d4+85} lbs.
+35: 5 ft. 10 in., {34d4+85} lbs.
+36: 5 ft. 11 in., {36d4+85} lbs.
+37: 6 ft., {38d4+85} lbs.
+38: 6 ft. 1 in., {40d4+85} lbs.
+39: 6 ft. 2 in., {32d4+120} lbs.
+40: 6 ft. 3 in., {34d4+120} lbs.
+41: 6 ft. 4 in., {36d4+120} lbs.
+42: 6 ft. 5 in., {38d4+120} lbs.
+43: 6 ft. 6 in., {40d4+120} lbs.
+44: 6 ft. 7 in., {42d4+120} lbs.
+45: 6 ft. 8 in., {44d4+120} lbs.
+46: 6 ft. 9 in., {46d4+120} lbs.
+47: 6 ft. 10 in., {48d4+120} lbs.
+48: 6 ft. 11 in., {50d4+120} lbs.
+
+
+
+Table: Race_And_Gender
+<b>Caucasian male</b><br>[@Age]<br>[#{1d12} Eyecolor] eyes[@maleFairHair][@Face] face<br><u>Distinguishing Marks:</u> [@Distinguishing]<br><u>Clothing:</u>  [|wearing|dressed in|sporting] [@Wearing].
+<b>Caucasian female</b><br>[@Age]<br>[#{1d12} Eyecolor] eyes[@femaleFairHair][@Face] face<br><u>Distinguishing Marks:</u> [@femDistinguishing]<br><u>Clothing:</u>  [|wearing|dressed in|sporting] [@Wearing].
+<b>Latino male</b><br>[@Age]<br>[#{1d16} Eyecolor] eyes[@maleDarkHair][@Face] face<br><u>Distinguishing Marks:</u> [@Distinguishing]<br><u>Clothing:</u>  [|wearing|dressed in|sporting] [@Wearing].
+<b>Latino female</b><br>[@Age]<br>[#{1d16} Eyecolor] eyes[@femaleDarkHair][@Face] face<br><u>Distinguishing Marks:</u> [@femDistinguishing]<br><u>Clothing:</u>  [|wearing|dressed in|sporting] [@Wearing].
+<b>Middle Eastern male</b><br>[@Age]<br>[#{3d6+2} Eyecolor] eyes[@maleDarkHair][@Face] face<br><u>Distinguishing Marks:</u> [@Distinguishing]<br><u>Clothing:</u>  [|wearing|dressed in|sporting] [@Wearing].
+<b>Middle Eastern female</b><br>[@Age]<br>[#{3d6+2} Eyecolor] eyes[@femaleDarkHair][@Face] face<br><u>Distinguishing Marks:</u> [@femDistinguishing]<br><u>Clothing:</u>  [|wearing|dressed in|sporting] [@Wearing].
+<b>Asian male</b><br>[@Age]<br>[#{1d10+8} Eyecolor] eyes[@maleDarkHair][@Face] face<br><u>Distinguishing Marks:</u> [@Distinguishing]<br><u>Clothing:</u> [|wearing|dressed in|sporting] [@Wearing].
+<b>Asian female</b><br>[@Age]<br>[#{1d10+8} Eyecolor] eyes[@femaleDarkHair][@Face] face<br><u>Distinguishing Marks:</u> [@femDistinguishing]<br><u>Clothing:</u> [|wearing|dressed in|sporting] [@Wearing].
+<b>African male</b><br>[@Age]<br>[#{1d10+10} Eyecolor] eyes[@maleDarkHair][@Face] face<br><u>Distinguishing Marks:</u> [@Distinguishing]<br><u>Clothing:</u> [|wearing|dressed in|sporting] [@Wearing].
+<b>African female</b><br>[@Age]<br>[#{1d10+10} Eyecolor] eyes[@femaleDarkHair][@Face] face<br><u>Distinguishing Marks:</u> [@femDistinguishing]<br><u>Clothing:</u> [|wearing|dressed in|sporting] [@Wearing].
+
+
+
+
+Table: Eyecolor
+Type: Lookup
+1-5:<u>Eyes:</u> Blue
+6-7:<u>Eyes:</u> Gray
+8-9:<u>Eyes:</u> Green
+10-15:<u>Eyes:</u> Brown
+16-20:<u>Eyes:</u> Black
+
+
+Table: maleFairHair
+<br><u>Hair:</u>Bald
+<br><u>Hair:</u> Shaved [#{1d12} Haircolor] hair
+<br><u>Hair:</u> Short [#{1d12} Haircolor] hair
+<br><u>Hair:</u> Medium-length [#{1d12} Haircolor] hair
+<br><u>Hair:</u> Long [#{1d12} Haircolor] hair
+
+
+Table: femaleFairHair
+<br><u>Hair:</u> Shaved [#{1d12} Haircolor] hair
+<br><u>Hair:</u> Short [#{1d12} Haircolor] hair
+<br><u>Hair:</u >Medium-length [#{1d12} Haircolor] hair
+<br><u>Hair:</u> Long [#{1d12} Haircolor] hair
+<br><u>Hair:</u> Very long [#{1d12} Haircolor] hair
+
+
+
+Table: maleDarkHair
+<br><u>Hair:</u> Bald
+<br><u>Hair:</u> Shaved [#{1d13+7} Haircolor] hair
+<br><u>Hair:</u> Short [#{1d13+7} Haircolor] hair
+<br><u>Hair:</u> Medium-length [#{1d13+7} Haircolor] hair
+<br><u>Hair:</u> Long [#{1d13+7} Haircolor] hair
+
+
+Table: femaleDarkHair
+<br><u>Hair:</u> Shaved [#{1d13+7} Haircolor] hair
+<br><u>Hair:</u> Short [#{1d13+7} Haircolor] hair
+<br><u>Hair:</u> Medium-length [#{1d13+7} Haircolor] hair
+<br><u>Hair:</u> Long [#{1d13+7} Haircolor] hair
+<br><u>Hair:</u> Very long [#{1d13+7} Haircolor] hair
+
+
+
+Table: Haircolor
+Type: Lookup
+1:[|gray|white]
+2-5:blond
+6-7:red
+8-10:brown
+11-19:black
+20:[|gray|white]
+
+
+
+
+Table: Face
+<br><u>Face:</u> Flat
+<br><u>Face:</u> Long
+<br><u>Face:</u> Oval
+<br><u>Face:</u> Plain
+<br><u>Face:</u> Round
+<br><u>Face:</u> Square
+<br><u>Face:</u> Broad
+<br><u>Face:</u> Angular
+
+
+
+
+
+
+Table: Distinguishing
+10:beard
+10:moustasche
+10:goatee
+10:stubble
+10:sideburns
+piercings
+distinctive tattoos
+missing finger
+eyepatch
+prosthetic arm
+prosthetic leg
+missing tooth
+gold tooth
+gold teeth
+distinctive jewelry
+glass eye
+distinctive scar
+50:no distinguishing marks
+
+
+Table: femDistinguishing
+piercings
+distinctive tattoos
+missing finger
+eyepatch
+prosthetic arm
+prosthetic leg
+missing tooth
+gold tooth
+distinctive jewelry
+glass eye
+distinctive scar
+10:heavy makeup
+10:light makeup
+50:no distinguishing marks
+
+
+
+
+
+
+
+
+Table: Wearing
+\a [@ClothingDescription] [@Clothing]
+\a [@ClothingDescription] [@Clothing] with [@Color] [@ClothingDetails]
+\a [@ClothingDescription] [@Outerwear] [|over|on top of|covering] \a [@Color] [@Clothing]
+
+
+Table: Clothing
+business outfit
+casual outfit
+explorer outfit
+formal outfit
+set of fatigues
+uniform
+coveralls
+jumpsuit
+overall
+flightsuit
+bodysuit
+
+
+
+
+Table: Outerwear
+coat
+overcoat
+trenchcoat
+poncho
+jacket
+parka
+windbreaker
+ghillie suit
+
+
+
+Table: ClothingDescription
+dirty
+expensive
+stained
+sturdy
+stylish
+tattered
+wrinkled
+worn
+outdated
+fashionable
+10:[@Color]
+20:\z
+
+
+
+Table: ClothingDetails
+buttons
+backpack
+boots
+belt
+cuffs
+collar
+elbowpads
+gloves
+hat
+helmet
+hood
+knee- and elbowpads
+kneepads
+logos
+pockets
+protective pads
+shoulderpads
+slogans
+shoes
+sneakers
+shoulder bag
+stripes
+zippers
+
+
+
+
+Table: Color
+4:black
+2:white
+2:[@Colors]
+3:[@ColorModifiers] [@Colors]
+[!Color] and [!Color]
+transparent
+2:brown
+2:gray
+
+
+Table: ColorModifiers
+pale
+bright
+faded
+neon
+dark
+
+
+Table: Colors
+red
+green
+blue
+yellow
+orange
+purple
+pink
+
+
+
+
+Table: Armor
+20:[@Armor_Light]
+5:[@Armor_Medium]
+[@Armor_Heavy]

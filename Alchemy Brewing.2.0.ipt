@@ -1,0 +1,75 @@
+; Alchemy Brewing.ipt
+Header: Each Time Unit is worth 2 hours. 
+Maxreps: 1
+Prompt: Alchemists Helping {} 1                                 //prompt1
+Prompt: Skill {Common|Uncommon|Rare|VeryRare|Legend} Common     //prompt2
+Prompt: Time Unit Searching {1|2|3|4|5|6} 1                     //prompt3
+
+Table: brews
+[#{$prompt2} Items]
+
+Table: Items
+Type: Dictionary
+Common:<font size=5pt><b>Common</b></font>\n[@{({1d6}*{{$prompt1}+{$prompt3}})} Common]\n
+Uncommon:<font size=5pt><b>Common</b></font>\n[@{({2d6}*{{$prompt1}+{$prompt3}})} Common]\n<font size=5pt><b>Uncommon</b></font>\n[@{({1d6}*{{$prompt1}+{$prompt3}})} Uncommon]\n
+Rare:<font size=5pt><b>Common</b></font>\n[@{({3d6}*{{$prompt1}+{$prompt3}})} Common]\n<font size=5pt><b>Uncommon</b></font>\n[@{({2d6}*{{$prompt1}+{$prompt3}})} Uncommon]\n<b><font size=5pt>Rare</b></font>\n[@{({1d6}*{{$prompt1}+{$prompt3}})} Rare]\n
+VeryRare:<font size=5pt><b>Common</b></font>\n[@{({4d6}*{{$prompt1}+{$prompt3}})} Common]\n<font size=5pt><b>Uncommon</b></font>\n[@{({3d6}*{{$prompt1}+{$prompt3}})} Uncommon]\n<font size=5pt><b>Rare</b></font>\n[@{({2d6}*{{$prompt1}+{$prompt3}})} Rare]\n<font size=5pt><b>Very Rare</b></font>\n[@{({1d6}*{{$prompt1}+{$prompt3}})} Very Rare]\n
+Legend:<font size=5pt><b>Common</b></font>\n[@{({5d6}*{{$prompt1}+{$prompt3}})} Common]\n<font size=5pt><b>Uncommon</b></font>\n[@{({4d6}*{{$prompt1}+{$prompt3}})} Uncommon]\n<font size=5pt><b>Rare</b></font>\n[@{({3d6}*{{$prompt1}+{$prompt3}})} Rare]\n<font size=5pt><b>Very Rare</b></font>\n[@{({2d6}*{{$prompt1}+{$prompt3}})} Very Rare]\n<font size=5pt><b>Legendary</b></font>\n[@{({1d6}*{{$prompt1}+{$prompt3}})} Legendary]\n
+
+
+Table: Common 
+<b>Alchemical Acid</b>\n2 common reactive reagent\n1 common poisonous reagent\n1 glass flask\n1 hour 1 DC 13 Common 50 gp\n
+<b>Alchemical Fire</b>\n3 common reactive reagent\n1 glass flask\n1 hour 1 DC 13 Common 50 gp\n
+<b>Alchemical Napalm</b>\n3 common reactive reagent\n1 common curative\n1 glass flask\n2 hours 1 DC 14 Common 60 gp\n
+<b>Antitoxin</b>\n2 common curative reagent\n1 common poisonous reagent\n1 glass vial\n1 hour 1 DC 13 Common 50 gp\n
+<b>Bottled Wind</b>\n2 common reactive reagents\n1 glass flask\n1 hour 1 DC 14 Common 35 gp\n
+<b>Burning Oil</b>\n2 common reactive reagents\n1 glass vial\n1 hour 1 DC 13 Common 35 gp\n
+<b>Healing Potion</b>\n3 common curative reagent\n1 glass vial\n1 hour 1 DC 13 Common 50 gp\n
+<b>Potion of Climbing</b>\n1 common reactive\n1 common poisonous\n1 uncommon reactive\n1 glass vial\n1 hour 1 DC 14 Common 75 gp\n
+<b>Packet of Blasting Powder</b>\n2 common reactive reagent\n2 hours\n1 DC Check: 14\nCommon\n40 gp\n
+<b>Smoke Powder</b>\n2 common reactive regent\n2 hours\n1 DC Check: 15\nCommon\n40 gp\n
+<b>Simple Explosive</b>\n2 packets blasting powder\n2 common reactive reagent\n2 hours 1 DC 15 Common 100 gp\n
+<b>Common Magical Ink</b>\n2 common alchemical reagent\n1 glass vial\n2 hours 1 DC 10 Common 30 gp\n
+<b>Dwarven Alcohol</b>\n1 flask of alcohol\n1 common reactive reagents\n1 sturdy metal flask\n8 hours 4 DC 12 Common 20 gp.\n
+
+Table: Uncommon
+<b>Potent Alchemical Acid</b>\n2 uncommon reactive reagent\n1 uncommon poisonous reagent\n1 glass flask\n1 hour 1 DC 15 Uncommon 135 gp\n
+<b>Flametongue Oil</b>\n2 uncommon reactive reagents\n1 uncommon arcane essence\n1 glass vial\n1 hour 1 DC 16 uncommon 180 gp\n
+<b>Dust of Dryness</b>\n1 uncommon poisonous reagent\n3 uncommon reactive reagents\n4 hours 2 DC 16 Uncommon 200 gp\n
+<b>Sticky Goo Potion</b>\n1 finely shredded scroll of web\nor\n2 uncommon poisonous reagents\n1 uncommon reactive reagent\n1 glass flask\n2 hours 1 DC 14 Uncommon 120 gp\n
+<b>Potent Alchemical Fire</b>\n3 uncommon reactive reagent\n1 glass flask\n1 hour 1 DC 15 Uncommon 135 gp\n
+<b>Potion of Animal Friendship</b>\n2 common reactive\n1 common poisonous\n1 uncommon curative\n1 primal common essence\n1 glass vial\n1 hour 1 DC 13 Uncommon 100 gp\n
+<b>Potion of Firebreath</b>\n1 common reactive\n1 uncommon reactive\n1 glass vial\n2 hours 1 DC 15 Uncommon 60 gp\n
+<b>Potion of Growth</b>\n1 common reactive reagent\n1 uncommon curative reagent\n1 uncommon reactive reagent\nglass vial\n2 hours 1 DC 14 Uncommon 100 gp\n
+<b>Greater Healing Potion</b>\n1 common curative reagent\n2 uncommon curative reagent\n1 glass vial\n2 hours 1 DC 16 Uncommon 100 gp\n
+<b>Potion of Poison</b>\n1 common poisonous\n1 uncommon poisonous\n1 glass vial\n1 hour 1 DC 14 Uncommon 65 gold\n
+<b>Potion of Resistance</b>\n1 uncommon primal essence\n1 uncommon reactive reagent\n1 common curative reagent\n1 glass vial\n2 hours 1 DC 15 Uncommon 200 gp\n
+<b>Potion of Water Breathing</b>\n1 common reactive\n1 uncommon poisonous\n1 uncommon reactive\n1 glass vial\n2 hours 1 DC 15 Uncommon 100 gp\n
+<b>Potion of Hill Giant Strength</b>\n1 uncommon primal essence\n1 uncommon reactive reagent\n1 uncommon curative reagent\n4 hours 2 DC 15 Uncommon 320 gp\n
+<b>Potent Explosive</b>\n4 packets blasting powder\n2 uncommon reactive reagent\n2 hours 1 DC 17 Uncommon 250 gp\n
+<b>Uncommon Magical Ink</b>\n2 uncommon alchemical reagent\n1 glass vial\n2 hours 1 DC 12 Uncommon 80 gp\n
+<b>Nail Bomb\n1 packet of nails</b>\n2 uncommon reactive reagent\n2 hours 1 DC 17 Uncommon 300 gp\n
+
+Table: Rare
+<b>Potion of Clairvoyance</b>\n1 uncommon reactive\n1 uncommon poisonous\n1 rare curative\n1 rare reactive\n1 arcane common essence\n1 glass vial\n2 hours 1 DC 16 Rare 550 gp\n
+<b>Potion of Gaseous Form</b>\n1 uncommon curative\n1 uncommon reactive\n1 rare curative\n1 rare reactive\n1 glass vial\n2 hours 1 DC 16 Rare 500 gp\n
+<b>Potion of Diminution</b>\n1 uncommon curative\n1 rare curative\n1 rare poisonous\n1 glass vial\n2 hours 1 DC 16 Rare 450 gp\n
+<b>Potion of Heroism</b>\n1 uncommon curative\n1 uncommon reactive\n1 rare curative\n1 rare reactive\n1 common divine essence\n1 glass vial\n2 hours 1 DC 16 Rare 540 gp.\n
+<b>Potion of Mind Reading</b>\n1 uncommon poisonous\n1 uncommon reactive\n1 rare poisonous\n1 rare reactive\n1 glass vial\n2 hours 1 DC 16 Rare 500 gp\n
+<b>Powerful Alchemical Acid</b>\n2 rare reactive reagent\n1 rare poisonous reagent\n1 glass flask\n2 hours 1 DC 17 Rare 650 gp\n
+<b>Powerful Alchemical Fire</b>\n3 rare reactive reagent\n1 glass flask\n2 hours 1 DC 17 Rare 650 gp\n
+<b>Powerful Explosive</b>\n8 packets blasting powder\n2 rare reactive reagent\n4 hours 2 DC 19 Rare 750 gp\n
+<b>Rare Magical Ink</b>\n2 rare alchemical reagent\n1 glass vial\n2 hours 1 DC 14 Rare 400 gp\n
+
+Table: Very Rare
+<b>Superior Healing Potion</b>\n2 uncommon curative\n2 rare curative\n1 glass vial\n4 hours 2 DC 15 Rare 500 gp\n
+<b>Supreme Healing Potion</b>\n2 uncommon curative\n2 rare curative\n2 very rare curative\n1 rare divine essence\n1 crystal vial\n4 hours 2 DC 20 Very Rare 5000 gp\n
+<b>Oil of Sharpness</b>\n1 rare poisonous\n2 very rare reactive\n400 gold of precious metal flakes.\n1 crystal vial\n4 hours 2 DC 20 Very Rare 5,200 gp\n
+<b>Potion of Flying</b>\n2 uncommon reactive\n2 rare curativev2 very rare reactive\n1 uncommon primal essence\n1 uncommon arcane essence\n1 crystal vial\n4 hours 2 DC 19 Very Rare 5,000 gp\n
+<b>Potion of Invisibility</b>\n2 uncommon reactive\n2 rare curative\n1 very rare reactive\n1 very rare curative\n1 crystal vial\n4 hours 2 DC 19 Very Rare 5,100 gp\n
+<b>Potion of Speed</b>\n2 uncommon reactive\n2 rare reactive\n1 very rare reactive\n1 very rare curative\n1 rare arcane essence\n1 crystal vial\n4 hours 2 DC 20 Very Rare 5,500 gp\n
+<b>Very Rare Magical Ink</b>\n2 very rare alchemical reagent\n1 glass vial\n4 hours 2 DC 16 Very Rare 4,000 gp\n
+
+Table: Legendary
+<b>Potion of Storm Giant Strength</b>\n1 legendary reactive reagent\n1 legendary curative reagent\n1 legendary primal essence\n1 crystal vial\n8 hours 4 DC 28 Legendary 25,000 gp\n
+<b>Legendary Magical Ink</b>\n2 legendary alchemical reagent\n1 glass vial\n8 hours 4 DC 18 Legendary 10,000 gp\n
